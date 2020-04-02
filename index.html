@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>East Dakota Census Form</title>
+    <style>
+      body {
+        text-align: center;
+        background-color: white;
+        padding: 0px 200px 0px 200px;
+        }
+
+      #main {
+        background-color: gray;
+        padding: 30px 0px 50px 0px;
+        box-shadow: 0px 0px 10px 5px black;
+      }
+
+      #title {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+    <h1 id="title">East Dakota Census 2020</h1>
+    <h2>Survey Form</h2>
+    <p id="description">
+      This is an online form for the East Dakota Census for the year 2020.
+      Please input your infomation so you can be counted in the state's
+      population.
+    </p>
+    <p><form id="survey-form" action="/index.html">
+      <label for="name" id="name-label">Name: </label><input type="text" id="name" placeholder="Enter full name here" required /></p>
+      <p><label for="number" id="number-label">
+        Age: </label>
+        <input
+          type="number"
+          id="number"
+          placeholder="Enter age here"
+          min="18"
+          max="100" required
+        /></p>
+      <p><label for="email" id="email-label">E-mail: </label>
+        <input type="email" id="email" placeholder="Enter e-mail address here" required /></p>
+    
+      <p><label for="status" id="dropdown-label">
+        Status:
+        <select id="dropdown">
+          <option value="Select one">Select one</option>
+          <option value="Married">Married</option>
+          <option value="Separated">Separated</option>
+          <option value="Single">Single</option>
+        </select>
+      </label></p>
+      <p><label for="political party" id="radio-label">
+        Political Party:
+        <input id="dem-radio" type="radio" name="dem-rep-un" value="democrat"/>Democrat
+        <input id="rep-radio" type="radio" name="dem-rep-un" value="republican"/>Republican
+        <input id="un-radio" type="radio" name="dem-rep-un" value="undeclared"/>Undeclared
+      </label></p>
+      <p><label for="preferred method" id="checkbox-label">
+        Preferred method of communication:
+        <input
+          id="sms-check"
+          type="checkbox"
+          name="comm-check"
+          value="sms"
+        />SMS
+        <input
+          id="email-check"
+          type="checkbox"
+          name="comm-check"
+          value="email"
+        />E-mail
+        <input
+          id="mail-check"
+          type="checkbox"
+          name="comm-check"
+          value="mail"
+        />Mail
+      </label></p>
+      <p><label for="comments" id="comments-label">Additional comments: </label><textarea id="comment"></textarea></p>
+      <p><button id="submit" type="submit">Submit</button></p>
+    </form></div>
+  </body>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js\"></script>
+</html>
